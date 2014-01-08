@@ -1,0 +1,10 @@
+#!/bin/bash
+
+termiantor='\033[0m'
+
+green=32
+color="\033[0; $green m"
+
+while read line; do
+	echo -e $color$line$termiantor
+done
