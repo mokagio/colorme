@@ -29,7 +29,6 @@ Really?? I didn't even check... Please open an issue with a link :)
 * Help
 * Semver
 * Warning when used not in pipe, see `grep`
-* Add support for _light_ colors (`\e[1;32m`)
 
 ---
 

@@ -3,6 +3,7 @@
 termiantor='\033[0m'
 
 color_code=0
+bold_code=0
 # would be better to use getopts
 # see http://mywiki.wooledge.org/BashFAQ/035#getopts
 while :
@@ -15,11 +16,13 @@ do
 		b  |  blue)		color_code=34; shift;;
 		p  |  purple)	color_code=35; shift;;
 		c  |  cyan)		color_code=36; shift;;
+		-b | --bold)	bold_code=1; shift;;
 		*)				break;; # no more options. break the loop
 	esac
 done
 
-color="\033[0; $color_code m"
+echo $bold_code
+color="\033[$bold_code; $color_code m"
 
 while read line; do
 	echo -e $color$line$termiantor
