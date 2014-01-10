@@ -21,7 +21,6 @@ do
 	esac
 done
 
-echo $bold_code
 color="\033[$bold_code; $color_code m"
 
 while read line; do
